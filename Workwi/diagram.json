@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "arshita arshita",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -56.1,
+      "left": -196.1,
+      "attrs": { "distance": "49" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 54,
+      "left": 138.2,
+      "attrs": { "color": "purple" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 157.85,
+      "left": 123.4,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -83.2,
+      "left": 10.4,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:TRIG", "esp:5", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:18", "green", [ "v0" ] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "esp:5V", "red", [ "v0" ] ],
+    [ "led1:C", "esp:GND.3", "green", [ "h-38", "v-19.2" ] ],
+    [ "r1:1", "led1:A", "green", [ "v-48", "h9.6" ] ],
+    [ "esp:2", "r1:2", "green", [ "h0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "v-38.4", "h-172.95" ] ],
+    [ "ldr1:GND", "esp:GND.2", "black", [ "h28.8", "v66.8", "h-115.2" ] ],
+    [ "esp:34", "ldr1:AO", "green", [ "h-19.05", "v-76.8", "h211.2" ] ]
+  ],
+  "dependencies": {}
+}
