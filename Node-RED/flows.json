@@ -1,11 +1,218 @@
 [
     {
+        "id": "63c801ca59cc421e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "cf81ea95a4dcbf60",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "1d6dc70429a85215",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "159539b2a93e5b43",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": 1883,
+        "clientid": "node-red-smartguard-01",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "381c4bbf11b57e2e",
+        "type": "ui_tab",
+        "name": "SmartGuard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8cdb30b37e567483",
+        "type": "ui_group",
+        "name": "Sensores",
+        "tab": "381c4bbf11b57e2e",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b740c84cae3d6902",
+        "type": "ui_group",
+        "name": "Status do Sistema",
+        "tab": "381c4bbf11b57e2e",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3dc9d21061befa63",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "381c4bbf11b57e2e",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2213d31417927ea3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "144b7266ce4ab1b4",
+        "type": "MySQLdatabase",
+        "name": "MySQL - SmartGuard IoT",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "smartguard_iot",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "ef8bbcd9fd597793",
+        "type": "ui_group",
+        "name": "Clima Externo",
+        "tab": "381c4bbf11b57e2e",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "652a3341156fac71",
@@ -20,12 +227,13 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 370,
-        "y": 120,
+        "x": 170,
+        "y": 140,
         "wires": [
             [
                 "16da8f0c16d9f85b",
-                "f3c28216694b43ea"
+                "f3c28216694b43ea",
+                "fb9e73e8c3b45e6f"
             ]
         ]
     },
@@ -42,8 +250,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 120,
+        "x": 640,
+        "y": 140,
         "wires": []
     },
     {
@@ -70,8 +278,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 730,
-        "y": 280,
+        "x": 790,
+        "y": 200,
         "wires": []
     },
     {
@@ -91,8 +299,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 360,
+        "x": 790,
+        "y": 280,
         "wires": []
     },
     {
@@ -133,8 +341,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 720,
-        "y": 480,
+        "x": 780,
+        "y": 400,
         "wires": [
             []
         ]
@@ -151,8 +359,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 400,
+        "x": 500,
+        "y": 320,
         "wires": [
             [
                 "14776ba2caadf1f1"
@@ -201,8 +409,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 740,
-        "y": 320,
+        "x": 800,
+        "y": 240,
         "wires": []
     },
     {
@@ -222,8 +430,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 400,
+        "x": 790,
+        "y": 320,
         "wires": []
     },
     {
@@ -243,8 +451,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 740,
-        "y": 440,
+        "x": 800,
+        "y": 360,
         "wires": []
     },
     {
@@ -285,83 +493,271 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 740,
-        "y": 520,
+        "x": 800,
+        "y": 440,
         "wires": [
             []
         ]
     },
     {
-        "id": "159539b2a93e5b43",
-        "type": "mqtt-broker",
+        "id": "16d805ebbc28698b",
+        "type": "mysql",
+        "z": "cf81ea95a4dcbf60",
+        "mydb": "144b7266ce4ab1b4",
         "name": "",
-        "broker": "broker.hivemq.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
+        "x": 710,
+        "y": 580,
+        "wires": [
+            [
+                "7905a8e4082ada32"
+            ]
+        ]
     },
     {
-        "id": "8cdb30b37e567483",
-        "type": "ui_group",
-        "name": "Sensores",
-        "tab": "381c4bbf11b57e2e",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
+        "id": "fb9e73e8c3b45e6f",
+        "type": "function",
+        "z": "cf81ea95a4dcbf60",
+        "name": "Preparar INSERT MySQL",
+        "func": "const dados = msg.payload;\n\nmsg.topic = `\nINSERT INTO leituras_iot \n(distancia_cm, luminosidade, status_aproximacao, status_luminosidade, status_geral)\nVALUES (?, ?, ?, ?, ?)\n`;\n\nmsg.payload = [\n    dados.distancia_cm,\n    dados.luminosidade,\n    dados.status_aproximacao,\n    dados.status_luminosidade,\n    dados.status_geral\n];\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "16d805ebbc28698b"
+            ]
+        ]
     },
     {
-        "id": "b740c84cae3d6902",
-        "type": "ui_group",
-        "name": "Status do Sistema",
-        "tab": "381c4bbf11b57e2e",
+        "id": "7905a8e4082ada32",
+        "type": "debug",
+        "z": "cf81ea95a4dcbf60",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e095c3a658eb1bf2",
+        "type": "inject",
+        "z": "cf81ea95a4dcbf60",
+        "name": "Buscar clima externo",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 700,
+        "wires": [
+            [
+                "26cc1b6d794e04ee"
+            ]
+        ]
+    },
+    {
+        "id": "26cc1b6d794e04ee",
+        "type": "http request",
+        "z": "cf81ea95a4dcbf60",
+        "name": " API OpenWeather",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=-23.5505&longitude=-46.6333&current=temperature_2m,relative_humidity_2m,weather_code&timezone=America%2FSao_Paulo",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 700,
+        "wires": [
+            [
+                "7fb099b72ce4e222"
+            ]
+        ]
+    },
+    {
+        "id": "48f06329f1babd56",
+        "type": "debug",
+        "z": "cf81ea95a4dcbf60",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "00fe15ec60dca1f7",
+        "type": "ui_text",
+        "z": "cf81ea95a4dcbf60",
+        "group": "ef8bbcd9fd597793",
         "order": 2,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
+        "width": 0,
+        "height": 0,
+        "name": "Text - Código Climático",
+        "label": "Código Climático",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 990,
+        "y": 920,
+        "wires": []
     },
     {
-        "id": "3dc9d21061befa63",
-        "type": "ui_group",
-        "name": "Histórico",
-        "tab": "381c4bbf11b57e2e",
-        "order": 3,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "381c4bbf11b57e2e",
-        "type": "ui_tab",
-        "name": "SmartGuard",
-        "icon": "dashboard",
+        "id": "86b3ebcbee92c970",
+        "type": "ui_gauge",
+        "z": "cf81ea95a4dcbf60",
+        "name": "Gauge Umidade externa",
+        "group": "ef8bbcd9fd597793",
         "order": 1,
-        "disabled": false,
-        "hidden": false
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade Externa",
+        "label": "%",
+        "format": "{{value}} %",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1010,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "61d0c4c8f0fea0b0",
+        "type": "ui_gauge",
+        "z": "cf81ea95a4dcbf60",
+        "name": "Gauge Temperatura Externa",
+        "group": "ef8bbcd9fd597793",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura Externa",
+        "label": "°C",
+        "format": "{{value}} °C",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1040,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "7fb099b72ce4e222",
+        "type": "function",
+        "z": "cf81ea95a4dcbf60",
+        "name": "Tratar dados Open-Meteo",
+        "func": "const clima = msg.payload.current;\n\nconst temperatura = {\n    payload: clima.temperature_2m\n};\n\nconst umidade = {\n    payload: clima.relative_humidity_2m\n};\n\nconst codigoClima = {\n    payload: clima.weather_code\n};\n\nreturn [\n    temperatura,\n    umidade,\n    codigoClima\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 700,
+        "wires": [
+            [
+                "61d0c4c8f0fea0b0",
+                "48f06329f1babd56"
+            ],
+            [
+                "86b3ebcbee92c970",
+                "bde4b1f4a1b3c903"
+            ],
+            [
+                "00fe15ec60dca1f7",
+                "76056875b7e2d0bb"
+            ]
+        ]
+    },
+    {
+        "id": "bde4b1f4a1b3c903",
+        "type": "debug",
+        "z": "cf81ea95a4dcbf60",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "76056875b7e2d0bb",
+        "type": "debug",
+        "z": "cf81ea95a4dcbf60",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 965.765625,
+        "y": 856.76171875,
+        "wires": []
     }
 ]
